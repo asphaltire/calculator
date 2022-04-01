@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="index.js"></script>
     <title>Online Calculator</title>
 </head>
+
 <body>
     <div class="frame">
         <div class="display">
+            <h1 id="output"></h1>
         </div>
         <div class="controls">
-            <div class="btn small"><h1 class="num" id="seven">7</h1></div>
-            <div class="btn small"><h1 class="num" id="eight">8</h1></div>
-            <div class="btn small"><h1 class="num" id="nine">9</h1></div>
-            <div class="btn small"><h1 class="num" id="del">DEL</h1></div>
-            <div class="btn small"><h1 class="num" id="four">4</h1></div>
-            <div class="btn small"><h1 class="num" id="five">5</h1></div>
-            <div class="btn small"><h1 class="num" id="six">6</h1></div>
-            <div class="btn small"><h1 class="num" id="minus">-</h1></div>
-            <div class="btn small"><h1 class="num" id="one">1</h1></div>
-            <div class="btn small"><h1 class="num" id="two">2</h1></div>
-            <div class="btn small"><h1 class="num" id="three">3</h1></div>
-            <div class="btn small"><h1 class="num" id="plus">+</h1></div>
-            <div class="btn small"><h1 class="num" id="zero">0</h1></div>
-            <div class="btn small"><h1 class="num" id="div">/</h1></div>
-            <div class="btn small"><h1 class="num" id="mul">*</h1></div>
-            <div class="btn small"><h1 class="num" id="equl">=</h1></div>
+            <div class="btn small">
+                <h1 class="num" id="seven" onClick="pushInStack(this.id)">7</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="eight" onClick="pushInStack(this.id)">8</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="nine" onClick="pushInStack(this.id)">9</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="del" onClick="pushInStack(this.id)">DEL</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="four" onClick="pushInStack(this.id)">4</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="five" onClick="pushInStack(this.id)">5</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="six" onClick="pushInStack(this.id)">6</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="minus" onClick="pushInStack(this.id)">-</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="one" onClick="pushInStack(this.id)">1</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="two" onClick="pushInStack(this.id)">2</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="three" onClick="pushInStack(this.id)">3</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="plus" onClick="pushInStack(this.id)">+</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="zero" onClick="pushInStack(this.id)">0</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="div" onClick="pushInStack(this.id)">/</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="mul" onClick="pushInStack(this.id)">*</h1>
+            </div>
+            <div class="btn small">
+                <h1 class="num" id="equal" onClick="pushInStack(this.id)">=</h1>
+            </div>
         </div>
     </div>
 </body>

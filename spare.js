@@ -104,16 +104,16 @@ function pushInStack(clicked) {
         if(clicked!="del")
         str += document.getElementById(clicked).innerHTML;
         //to continuously print on screen 
-        // if(clicked=="del")
-        // {
-        //     str = str.slice(0,str.length-1);
-        //     calc.pop();
-        //     console.log(str);
-        //     console.log(calc);
+        if(clicked=="del")
+        {
+            str = str.slice(0,str.length-1);
+            calc.pop();
+            console.log(str);
+            console.log(calc);
             
-        //     output(str);
-        //     return;
-        // }
+            output(str);
+            return;
+        }
         if (calc.length == 0&&clicked!="del") 
         {
             if (clicked != "div" && clicked != "mul")
@@ -135,7 +135,7 @@ function pushInStack(clicked) {
         {
             calc.push(document.getElementById(clicked).innerHTML);
         }
-        else if (clicked!= "plus" && clicked != "mul" && clicked != "div" && clicked != "minus") 
+        else if (clicked != "plus" && clicked != "mul" && clicked != "div" && clicked != "minus") 
         {
             if (!isNaN(calc[calc.length - 1])) {
                 calc[calc.length - 1] += document.getElementById(clicked).innerHTML;
@@ -152,7 +152,6 @@ function pushInStack(clicked) {
     else {
         // console.log(calc);
         // calculate();
-        str="";
         topostfix();
     }
 
