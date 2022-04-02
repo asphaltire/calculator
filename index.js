@@ -1,4 +1,20 @@
 const calc = [];
+function compile()
+{
+      // to make two single digit merge and push all in array
+      let i=1;
+      while(i<calc.length)
+      {
+          if(!isNaN(calc[i]) && !isNaN(calc[i-1]))
+          {
+              calc[i-1]+=calc[i];
+              calc.splice(i,1);
+          } 
+          else
+          i++;
+          console.log(calc);
+      }  
+}
 function topostfix() {
     const ans = [];
     const stack = [];
@@ -40,7 +56,7 @@ function topostfix() {
     {
         calc.pop();
     }
-    // output(ans);
+    console.log(ans);
     calculate(ans);
 }
 
@@ -102,24 +118,24 @@ function pushInStack(clicked) {
     if (clicked != "equal") 
     {   
         if(clicked!="del")
-        str += document.getElementById(clicked).innerHTML;
-        //to continuously print on screen 
-        // if(clicked=="del")
-        // {
-        //     str = str.slice(0,str.length-1);
-        //     calc.pop();
-        //     console.log(str);
-        //     console.log(calc);
+            str += document.getElementById(clicked).innerHTML;
+        else if(clicked=="del")
+        {
+            str = str.slice(0,str.length-1);
+            calc.pop();
+            console.log(str);
+            console.log(calc);
             
-        //     output(str);
-        //     return;
-        // }
-        if (calc.length == 0&&clicked!="del") 
+            output(str);
+            return;
+        }
+        if (calc.length == 0) 
         {
             if (clicked != "div" && clicked != "mul")
                 document.getElementById("output").innerHTML = document.getElementById(clicked).innerHTML;
             else
             {
+                str="";
                 error();
                 return;
             }
@@ -129,23 +145,7 @@ function pushInStack(clicked) {
              output(str);
              console.log(str);
         }
-
-        // to make two single digit merge and push all in array
-        if (calc.length == 0)
-        {
             calc.push(document.getElementById(clicked).innerHTML);
-        }
-        else if (clicked!= "plus" && clicked != "mul" && clicked != "div" && clicked != "minus") 
-        {
-            if (!isNaN(calc[calc.length - 1])) {
-                calc[calc.length - 1] += document.getElementById(clicked).innerHTML;
-            }
-            else
-                calc.push(document.getElementById(clicked).innerHTML);
-        }
-        else
-            calc.push(document.getElementById(clicked).innerHTML);
-
             console.log(calc);
 
     }
@@ -153,6 +153,7 @@ function pushInStack(clicked) {
         // console.log(calc);
         // calculate();
         str="";
+        compile();
         topostfix();
     }
 
