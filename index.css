@@ -1,5 +1,5 @@
 *{
-    border:solid;
+    
     margin:0;
     padding:0;
     color:black;
@@ -51,4 +51,12 @@ body{
     color:white;
     overflow:hidden;
     text-align: right;
+}
+@media screen and (max-width:850px)
+{
+    .frame{
+        width:90%;
+       
+    }
+    
 }
