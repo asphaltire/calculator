@@ -1,4 +1,5 @@
 const calc = [];
+let str ="";
 function compile()
 {
       // to make two single digit merge and push all in array
@@ -101,7 +102,10 @@ function calculate(ans) {
         }
     }
     // console.log(stack);
-    output(stack.pop());
+    
+    calc.push(stack.pop());
+    str+=calc[0];
+    output(calc);
 }
 
 function output(result) {
@@ -112,7 +116,7 @@ function error()
 {
     document.getElementById("output").innerHTML ="syntax Error";
 }
-let str ="";
+
 function pushInStack(clicked) {
 
     if (clicked != "equal") 
