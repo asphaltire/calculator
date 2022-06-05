@@ -102,13 +102,25 @@ function calculate(ans) {
         }
     }
     // console.log(stack);
+    let ans1 = stack.pop()
     
-    calc.push(stack.pop());
-    str+=calc[0];
-    output(calc);
+    
+    output(ans1);
+    const answer=ans1.toString().split("");
+    console.log("this is answer "+answer);
+    while(answer.length!=0)
+    {
+        calc.push(answer.pop());
+        console.log(calc[calc.length-1])
+        str+=calc[calc.length-1];
+    }
 }
 
 function output(result) {
+    if (str=="06/06/2000")
+    {
+        result = "HAPPY BIRTHDAY SONAL!!";
+    }
     document.getElementById("output").innerHTML = result;
 }
 
@@ -118,7 +130,10 @@ function error()
 }
 
 function pushInStack(clicked) {
-
+    if (str=="06/06/2000")
+    {
+        output(result);
+    }
     if (clicked != "equal") 
     {   
         if(clicked!="del")
