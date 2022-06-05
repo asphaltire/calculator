@@ -14,6 +14,13 @@ body{
     display:grid;
    place-items:center;
 }
+#sonal_cut{
+    height:20%;
+    position:absolute;
+    top:0;
+    left:0;
+    visibility:hidden;
+}
 .frame{
     width:35%;
     height:70%;

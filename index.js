@@ -1,3 +1,6 @@
+
+
+
 const calc = [];
 let str ="";
 function compile()
@@ -119,9 +122,13 @@ function calculate(ans) {
 function output(result) {
     if (str=="06/06/2000")
     {
+
         result = "HAPPY BIRTHDAY SONAL!!";
+        document.getElementById("sonal_cut").style.visibility = "visible";
     }
     document.getElementById("output").innerHTML = result;
+    
+    
 }
 
 function error()
