@@ -120,7 +120,7 @@ function calculate(ans) {
 }
 
 function output(result) {
-    if (str=="06/06/2000")
+    if (str=="06/06/1999")
     {
 
         result = "HAPPY BIRTHDAY SONAL!!";
@@ -137,7 +137,7 @@ function error()
 }
 
 function pushInStack(clicked) {
-    if (str=="06/06/2000")
+    if (str=="06/06/1999")
     {
         output(result);
     }
